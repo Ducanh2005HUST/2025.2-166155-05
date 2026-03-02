@@ -6,7 +6,7 @@ public class HelloView {
     private Scanner scanner = new Scanner(System.in);
 
     public String getUserInput() {
-        System.out.print("Nhập tên của bạn: ");
+        System.out.print("Nhap ten cua ban: ");
         return scanner.nextLine();
     }
 
