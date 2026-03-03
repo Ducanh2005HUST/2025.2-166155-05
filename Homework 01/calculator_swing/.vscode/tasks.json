@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Calculator Swing",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-d",
+                ".",
+                "main.java",
+                "controller/*.java",
+                "model/*.java",
+                "view/*.java"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$javac"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Calculator Swing",
+            "type": "shell",
+            "command": "java",
+            "args": ["main"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "Build Calculator Swing",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
